@@ -3,7 +3,8 @@
 An interactive Streamlit dashboard for analyzing and predicting customer churn using the Telco Customer Churn dataset, powered by a trained Random Forest model.
 
 <img width="1905" height="864" alt="Business Insight png" src="https://github.com/user-attachments/assets/9bffccfd-0f92-4265-beaf-ccc5f6e21356" />
-
+<img width="1903" height="856" alt="Customer Churn Analysis png" src="https://github.com/user-attachments/assets/df4efaba-2d9b-4c07-95ea-76e2e33bb034" />
+<img width="1904" height="861" alt="Executive Dashboard png" src="https://github.com/user-attachments/assets/864ae7be-a287-40cc-831c-5586b41907ee" />
 
 ---
 
