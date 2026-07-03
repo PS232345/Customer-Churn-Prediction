@@ -1,134 +1,148 @@
-Customer Churn Analytics & Prediction Dashboard
+# Customer Churn Analytics Dashboard
 
-Project Overview
+An interactive Streamlit dashboard for analyzing and predicting customer churn using the Telco Customer Churn dataset, powered by a trained Random Forest model.
 
-This project is an end-to-end Data Analytics and Machine Learning solution designed to analyze customer churn behavior and predict customer retention risk.
+<img width="1905" height="864" alt="Business Insight png" src="https://github.com/user-attachments/assets/9bffccfd-0f92-4265-beaf-ccc5f6e21356" />
 
-The dashboard provides business insights through interactive visualizations, key performance indicators (KPIs), and churn trend analysis. A Random Forest Classification model is used to predict customer churn with an accuracy of 80.2%.
-Business Problem
 
-Customer churn is one of the most important challenges for subscription-based businesses.
+---
 
-The objective of this project is to:
+## 📌 Overview
 
+This project analyzes customer churn patterns for a telecom company and presents the findings through an interactive, multi-page Streamlit dashboard. It combines exploratory data analysis, visual analytics, and a pre-trained machine learning model to help identify why customers leave and what actions can reduce churn.
 
-Analyze customer behavior patterns
+---
 
-Identify factors influencing churn
+## ✨ Features
 
-Visualize churn trends
+- **Executive Dashboard** — Key metrics (total customers, churn rate, average tenure, average monthly charges) with churn distribution and tenure visualizations
+- **Churn Analysis** — Deep-dive charts on churn by contract type, payment method, internet service, and tenure vs. monthly charges
+- **Business Insights** — Data-driven findings and actionable retention recommendations
+- **ML Model Integration** — Loads a pre-trained Random Forest churn prediction model, scaler, and label encoders
+- Clean, custom-styled UI with responsive metric cards
 
-Build a predictive model to estimate churn risk
+---
 
-Support data-driven customer retention strategies
+## 🗂️ Dataset
 
-Features
+- **Source:** [Telco Customer Churn Dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) (IBM Sample Data)
+- **File:** `Telco-Customer-Churn.csv`
+- Contains customer demographics, account information, services subscribed, and churn status
 
-Executive Dashboard
+---
 
-Total Customers KPI
+## 🛠️ Tech Stack
 
-Churn Rate KPI
+| Category | Tools |
+|---|---|
+| Language | Python 3.11 |
+| Dashboard/UI | Streamlit |
+| Visualization | Plotly Express |
+| Data Handling | pandas |
+| Machine Learning | scikit-learn (Random Forest) |
+| Model Persistence | joblib |
 
-Average Customer Tenure
+---
 
-Average Monthly Charges
+## 📊 Model
 
-Customer Churn Distribution
+- **Algorithm:** Random Forest Classifier
+- **Accuracy:** 80.2%
+- **Artifacts used by the app:**
+  - `customer_churn_model.pkl` — trained classifier
+  - `scaler.pkl` — feature scaler
+  - `label_encoders.pkl` — categorical encoders
 
-Customer Tenure Analysis
+> The app runs even without these model files — it will display an "Model Files Not Found" notice on the dashboard and the EDA pages remain fully functional.
 
-Churn Analysis
+---
 
-Churn by Contract Type
+## 📁 Project Structure
 
-Churn by Payment Method
+```
+Customer Churn Analytics Dashboard/
+│
+├── app.py                          # main Streamlit application
+├── Telco-Customer-Churn.csv        # dataset
+├── customer_churn_model.pkl        # trained Random Forest model
+├── scaler.pkl                      # feature scaler
+├── label_encoders.pkl              # categorical label encoders
+├── requirements.txt
+└── README.md
+```
 
-Churn by Internet Service
+---
 
-Tenure vs Monthly Charges Analysis
+## ⚙️ Installation
 
-Business Insights
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/customer-churn-analytics-dashboard.git
+cd customer-churn-analytics-dashboard
 
-Key churn drivers identification
+# Create a virtual environment
+python -m venv .venv
+.venv\Scripts\activate      # Windows
+source .venv/bin/activate   # macOS/Linux
 
-Customer retention recommendations
+# Install dependencies
+pip install -r requirements.txt
+```
 
-Strategic business actions
+### requirements.txt
+```
+streamlit
+pandas
+plotly
+scikit-learn
+joblib
+```
 
-Machine Learning Model
+---
 
-Random Forest Classifier
+## ▶️ Usage
 
-Feature Encoding
+1. Place `Telco-Customer-Churn.csv` in the project root.
+2. (Optional) Add `customer_churn_model.pkl`, `scaler.pkl`, and `label_encoders.pkl` for full model-status display.
+3. Run the app:
+   ```bash
+   streamlit run app.py
+   ```
+4. The dashboard opens in your browser with three pages accessible from the sidebar:
+   - **Executive Dashboard**
+   - **Churn Analysis**
+   - **Business Insights**
 
-Data Scaling
+---
 
-Model Persistence using Joblib
+## 📈 Key Insights
 
-Technology Stack
+- **Contract Type:** Month-to-month customers churn the most; long-term contracts improve retention
+- **Tenure:** Newer customers are more likely to churn than long-tenured ones
+- **Monthly Charges:** Higher charges correlate with higher churn probability
+- **Payment Method:** Electronic check users show elevated churn rates
 
-Python
+**Recommendations:** Offer long-term contract discounts, build retention programs for new customers, and monitor high-paying customers proactively.
 
-Pandas
+---
 
-NumPy
+## 🚀 Future Improvements
 
-Plotly
+- Add live churn prediction form (input customer details → get real-time prediction)
+- Deploy on Streamlit Community Cloud
+- Add model explainability (SHAP/feature importance) to the dashboard
+- Experiment with additional models (XGBoost, Logistic Regression) for comparison
+- Add filters (date range, customer segment) for interactive slicing
 
-Streamlit
+---
 
-Scikit-Learn
+## 👤 Author
 
-Joblib
+**Prachi Sable**
+B.E. Artificial Intelligence & Data Science, GSMCOE, Pune
 
-Dataset
+---
 
-Telco Customer Churn Dataset
+## 📄 License
 
-Dataset Size:
-
-7,043 Customers
-
-  21 Features
-
-
-Model Performance
-
-Metric	   Value
-
-Accuracy	 80.2%
-
-
-Dashboard Screenshots
-<img width="1904" height="861" alt="Executive Dashboard png" src="https://github.com/user-attachments/assets/9c3d9580-7991-4b13-9503-739558f539a3" />
-<img width="1903" height="856" alt="Customer Churn Analysis png" src="https://github.com/user-attachments/assets/94ea6cb0-2c53-483d-8836-342a38a2f7b9" />
-<img width="1904" height="861" alt="Executive Dashboard png" src="https://github.com/user-attachments/assets/d7e21b42-4bfa-418a-a64a-6a1c88a5d44f" />
-
-Business Insights
-
-Month-to-month contracts exhibit the highest churn rates.
-
-Customers with shorter tenure are more likely to leave.
-
-Higher monthly charges increase churn probability.
-
-Electronic check users show relatively higher churn behavior.
-
-
-Future Improvements
-
-Advanced Customer Segmentation
-
-Churn Probability Scoring
-
-Power BI Dashboard Integration
-
-Hyperparameter Optimization
-
-Model Explainability using SHAP
-
-
-Author
-
-Prachi
+This project is licensed under the MIT License.
